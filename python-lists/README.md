@@ -33,3 +33,21 @@ list_of_types = [1, 2,'names', True, False, None, addNums, {'name': 'Doud', 'age
 
 ## List manipulations
 List are very powerful in python and many other programming languages, because you can add item, remove item, arrange items in specific order and many more. Let's see an exmaples
+
+### List Indexing or accessing elements of a list
+- Elements of a list can be accessed using their indexes
+- Lists are zero-indexed (Meaning You have to start counting from `0`)
+
+Lets say we have a list of names and numbers
+```py
+
+# list_index =   0       1       2        3
+    names = ['James', 'Adam', 'Wills', 'Doud']
+
+    print(names[0]) # James
+    print(names[1]) # Adam
+    print(names[2]) # Wills
+```
+
+### Getting the length of a list
+You can get the length of a list by using a built-in function `len()` in python. The `len([1,2,3,4])` function takes a list as an argument and return its length. 
