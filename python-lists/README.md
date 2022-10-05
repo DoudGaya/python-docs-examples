@@ -78,7 +78,7 @@ print(nums[-3]) # 5
 ```
 ## List Slicing 
 The slicing can be used to  get of cut some part of a list in multiple different ways using quare bracket and a column `[<start index>:<end index>]`
-* The first part of the column is where you want to the slicing to start `<start index>` and the last part is where you want it to end `<end index>`
+* The first part of the column is where you want to the slicing to start `<startIndex>` and the last part is where you want it to end `<endIndex>`
 * If you leave the first part empty and and specify the second part like this `[:3]` it'll start from the index `0` to the  index `3`
 * If you leave the last part empty it'll like this `[2:]` start from `2` to the end of the list. 
 * Not specifying anything will give you a copy of the array from 1st to last 
