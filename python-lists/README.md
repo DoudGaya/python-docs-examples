@@ -99,3 +99,76 @@ print(numbers[:]) # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print(numbers[-3:]) # [8, 9, 10]
 ```
 
+## Multidimentional List 
+
+A list can contain another list , Let's se an exmaple of that
+* Let's say we have a list that conatains two lists
+* First conatains number and the other contains string
+* Getting number `2` from the number list will be done like this
+```py
+listings = [[1,2,3], 'num1', 'num2', 'num3']
+
+listings[0][1] # 2
+```
+
+## Changing items of a list
+
+* We can change any item using its index
+```py
+names = ['Sam', 'Wills', 'Dan']
+
+names[-1] = 'John'
+
+print(names) # ['Sam', 'Wills', 'John']
+```
+
+* We can also change couple of items using the slicing trick
+
+```py
+    names[:2] = ['Jane', 'Maria']
+    print(names) # ['Jane', 'Maria', 'John']
+```
+
+* Maybe I just want to remove items from the list
+```py 
+ names[:2] = []
+```
+
+## Adding more to a list
+
+* Let's say I have a list `[1,2,3,4]` and another list `[5,6,7,8]`
+```py
+num1 = [1,2,3,4]
+
+num2 = [5,6,7,8]
+
+print(num1 + num2) # [1,2,3,4,5,6,7,8]
+```
+## List Methods 
+These are functions you can use on a list. Maybe to modify a list or to manipulate a list. the `len()` is an example of it. 
+
+* Adding to a list with `append()`
+```py
+names = ['Sam', 'Wills', 'Dan']
+names.append('Ali')
+
+print(names) # ['Sam', 'Wills', 'Dan', 'Ali']
+
+```
+
+
+* You can add more items to a list with `extend()`
+```py
+nums = [1,2,3,4,5]
+
+nums.extend([6,7,8,9,0]) 
+
+print(nums) #  [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+```
+
+* You can insert an item in at given position with `insert()`
+* The insert method will push the rest of the items to the next indexes
+* `insert()` takes the two params, the first is the index and second is what to insert.
+```py
+    
+```
