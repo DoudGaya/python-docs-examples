@@ -147,7 +147,9 @@ print(num1 + num2) # [1,2,3,4,5,6,7,8]
 ## List Methods 
 These are functions you can use on a list. Maybe to modify a list or to manipulate a list. the `len()` is an example of it. 
 
-* Adding to a list with `append()`
+## Adding to a list with `append()`
+* This can be use to add item to the end of a list
+* Equivalent to `a[len(a):] = [x]`.
 ```py
 names = ['Sam', 'Wills', 'Dan']
 names.append('Ali')
@@ -155,8 +157,7 @@ names.append('Ali')
 print(names) # ['Sam', 'Wills', 'Dan', 'Ali']
 
 ```
-
-
+## Extend a list with `extend()`
 * You can add more items to a list with `extend()`
 ```py
 nums = [1,2,3,4,5]
@@ -165,10 +166,65 @@ nums.extend([6,7,8,9,0])
 
 print(nums) #  [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 ```
-
+## Add item to a specific index with `insert()`
 * You can insert an item in at given position with `insert()`
 * The insert method will push the rest of the items to the next indexes
 * `insert()` takes the two params, the first is the index and second is what to insert.
 ```py
-    
+    sports = ['Foot Ball', 'Soccer', 'Tennis']
+    sports.insert(0, 'Basket Ball')
+
+    print(sports) # ['Basket Ball', 'Foot Ball', 'Soccer', 'Tennis']
 ```
+## Remove item from a list with `remove()`
+* You can remove an item by passing it to the remove function
+* if item doesn't exist it'll return a ValueError.
+
+```py 
+ sports = ['Foot Ball', 'Soccer', 'Tennis']
+ sports.remove('Soccer')
+ print(sports) # ['Foot Ball', 'Tennis']
+```
+
+## Removing item using index with `pop(i)`
+* `pop` method takes an index and remove element at that specific index
+* If no index is passed it'll remove the last item in the list
+```py 
+sports = ['Foot Ball', 'Soccer', 'Tennis']
+
+sports.pop(0) 
+
+print(sports) # ['Soccer', 'Tennis']
+```
+
+## Clearing all the elements of a list with` clear()`
+* This clears all the elements in a list
+* Equivalent to `del a[:]`
+* Also Equivalent to `a[:] = []`
+```py
+    numbers = [1,2,3,4,5,6,7]
+    print(numbers.clear()) # []
+```
+
+
+## Getting the index of an item with `index()`
+* the index method takes 3 arguments
+* Fist argument is the item to look for 
+* Second where to start looking 
+* third where to stop looking
+* if only one argument is passed then it'll return the first index of the item
+
+```py 
+   numbers = [1,'a',3,4,'a',6,7, 'a', 8, 9]
+   numbers.index('a') # 1
+   numbers.index('a', 2, 6) # 4
+   numbers.index('a', 6) # 7
+```
+
+## Count the number of times item appear in a list with `count()`
+
+```py 
+    numbers = [1,'a',3,4,'a',6,7, 'a', 8, 9]
+    print(numbers.count('a')) # 3
+```
+
