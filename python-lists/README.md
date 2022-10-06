@@ -147,7 +147,7 @@ print(num1 + num2) # [1,2,3,4,5,6,7,8]
 ## List Methods 
 These are functions you can use on a list. Maybe to modify a list or to manipulate a list. the `len()` is an example of it. 
 
-## Adding to a list with `append()`
+## Adding to a list with `list.append()`
 * This can be use to add item to the end of a list
 * Equivalent to `a[len(a):] = [x]`.
 ```py
@@ -157,8 +157,8 @@ names.append('Ali')
 print(names) # ['Sam', 'Wills', 'Dan', 'Ali']
 
 ```
-## Extend a list with `extend()`
-* You can add more items to a list with `extend()`
+## Extend a list with `list.extend()`
+* You can add more items to a list with `list.extend()`
 ```py
 nums = [1,2,3,4,5]
 
@@ -166,8 +166,8 @@ nums.extend([6,7,8,9,0])
 
 print(nums) #  [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 ```
-## Add item to a specific index with `insert()`
-* You can insert an item in at given position with `insert()`
+## Add item to a specific index with `list.insert()`
+* You can insert an item in at given position with `list.insert()`
 * The insert method will push the rest of the items to the next indexes
 * `insert()` takes the two params, the first is the index and second is what to insert.
 ```py
@@ -176,7 +176,7 @@ print(nums) #  [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 
     print(sports) # ['Basket Ball', 'Foot Ball', 'Soccer', 'Tennis']
 ```
-## Remove item from a list with `remove()`
+## Remove item from a list with `list.remove()`
 * You can remove an item by passing it to the remove function
 * if item doesn't exist it'll return a ValueError.
 
@@ -186,7 +186,7 @@ print(nums) #  [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
  print(sports) # ['Foot Ball', 'Tennis']
 ```
 
-## Removing item using index with `pop(i)`
+## Removing item using index with `list.pop(i)`
 * `pop` method takes an index and remove element at that specific index
 * If no index is passed it'll remove the last item in the list
 ```py 
@@ -197,7 +197,7 @@ sports.pop(0)
 print(sports) # ['Soccer', 'Tennis']
 ```
 
-## Clearing all the elements of a list with` clear()`
+## Clearing all the elements of a list with `list.clear()`
 * This clears all the elements in a list
 * Equivalent to `del a[:]`
 * Also Equivalent to `a[:] = []`
@@ -207,7 +207,7 @@ print(sports) # ['Soccer', 'Tennis']
 ```
 
 
-## Getting the index of an item with `index()`
+## Getting the index of an item with `list.index()`
 * the index method takes 3 arguments
 * Fist argument is the item to look for 
 * Second where to start looking 
@@ -221,10 +221,37 @@ print(sports) # ['Soccer', 'Tennis']
    numbers.index('a', 6) # 7
 ```
 
-## Count the number of times item appear in a list with `count()`
+## Count the number of times item appear in a list with `list.count()`
 
 ```py 
     numbers = [1,'a',3,4,'a',6,7, 'a', 8, 9]
     print(numbers.count('a')) # 3
 ```
 
+## Reversing elements of a list with `list.reverse()`
+* With reverse, elements from the left moves to the right and vice-versa
+```py
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+nums.reverse()
+
+print(nums) # [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+```
+
+## Sorting a list alphabetically with `list.sort()`
+* This method takes two optional parameters, 
+* The `key='...'` and the `reverse='...'`
+* The `reverse=` tells the direction of the sort ascending or descending, takes it `True` or `False` value
+
+```py
+    #Sorting random numbers 
+    nums = [8, 7, 2, 4, 5, 10, 3, 1, 9, 6]
+    nums.sort()
+    print(nums) # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    # with reverse=True
+    random = [8, 7, 2, 4, 5, 10, 3, 1, 9, 6]
+    random.sort(reverse=True)
+    print(random) # [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+```
+* The `key='...'` option is particularly useful when you're dealing with a list of other datatypes, for example a `dictionary` or a `set` or a `tuple`
+* Let's see an example of that
