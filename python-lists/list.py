@@ -1,4 +1,7 @@
-nums = [8, 7, 2, 4, 5, 10, 3, 1, 9, 6]
-nums.sort(reverse=True)
 
-print(nums)
+
+def func():
+    return 'Hello'
+different_type = ['String', True, func, [1,2], (0, 1), {'name': 'Doud'}]
+
+print(len(different_type))

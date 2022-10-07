@@ -253,5 +253,26 @@ print(nums) # [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
     random.sort(reverse=True)
     print(random) # [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 ```
-* The `key='...'` option is particularly useful when you're dealing with a list of other datatypes, for example a `dictionary` or a `set` or a `tuple`
-* Let's see an example of that
+* The `key='...'` option is particularly useful when you're dealing with a list of datatypes like strings or a `dictionary` or a `set` or a `tuple`
+* Let's see an example of that.
+```py 
+    # sorting by length of a string
+    nums = ['james', 'jim', 'sam', 'jimmy']
+    nums.sort(key=len)
+    print(nums) # ['jim', 'sam', 'james', 'jimmy']
+
+
+    # Sorting tuples list but only the second item in the tuple
+    # step i define a func
+
+    coordinates = [(2, 4), (3, 2), (4, 1), (9, 0)]
+
+    def secondItem(val):
+        return secondItem[1]
+    coordinates.sort(key=secondItem)
+
+    print(coordinates) # [(9, 0), (4, 1), (3, 2), (2, 4)]
+```
+
+## The lambda function
+
