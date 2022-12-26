@@ -39,10 +39,10 @@ def add_multiple_numbers(numbers):
 print(add_multiple_numbers([1, 2, 3, 4, 5, 6, 7]))
 ```
 
-3 - The most effective way is to use and `*args` or `**kwargs` the main difference between the two is the keywords and we'll see an example of that later
+3 - The most effective way is to use and `*args` or `**kwargs` the main difference between the two is the keywords and we'll see an example of that later. With `*args` you don't have to specify the or create the list because in most cases you may not know the number of arguments. 
 ```py
 
-def add_multiple_numbers(numbers):
+def add_multiple_numbers(*args):
     sum = 0
     for i in numbers:
         sum += i
