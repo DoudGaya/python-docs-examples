@@ -26,3 +26,12 @@ def add_multiple_numbers(numbers):
     return sum
 
 print(add_multiple_numbers([1, 2, 3, 4, 5, 6]))
+
+
+# Example 2 - Passing Multiple arguments using the *args
+def add_multiple_numbers(*args):
+    sum = 0
+    for i in args:
+        sum += i
+    return sum
+print(add_multiple_numbers(1, 2, 3, 4, 5, 6, 8))
