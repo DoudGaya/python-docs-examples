@@ -52,7 +52,7 @@ def add_multiple_numbers(*args):
     return sum
 print(add_multiple_numbers(1, 2, 3, 4, 5, 6, 8)) # 29
 ```
-Note: While using the `*args` parameter, you don't have to explicitly use the `args` keyword, it is not required. You can use name it however you want just like a normal argument. What's important is that you use the unpacking operator `*` before the argument to let the function know that this is suppose to receive multiple parameters. 
+Note: While using the `*args` and `**kwargs` parameter, you don't have to explicitly use the `args` or `kwargs` keyword, it is not required. You can use name it however you want just like a normal argument. What's important is that you use the unpacking operators `*` `**` before the arguments name to let the function know that this is suppose to receive multiple parameters. 
 
 ```py
 
@@ -64,9 +64,19 @@ def add_multiple_numbers(*whatever_i_want):
     return sum
 print(add_multiple_numbers(1, 2, 3, 4, 5, 6, 8)) # 29
 
-# This will still work fine 
+# This will still work fine as expected
 ```
-
-
 ## **Kwargs Variable
+
+The Kwargs accepts keyword Variables in their parameters and return return a key value pair or a python dictionary `dict`. 
+
+```py
+# Example 5 - Passing Multiple arguments using the *args
+def add_multiple_numbers(**kwargs):
+    sum = 0
+    for i in whatever_i_want:
+        sum += kwargs[i]
+    return sum
+print(add_multiple_numbers(num1=10, num2=20, num3=30)) # 60
+```
 

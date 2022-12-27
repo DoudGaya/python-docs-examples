@@ -35,3 +35,12 @@ def add_multiple_numbers(*args):
         sum += i
     return sum
 print(add_multiple_numbers(1, 2, 3, 4, 5, 6, 8))
+
+
+# Example 5 - Passing Multiple arguments using the *args
+def add_multiple_numbers(**kwargs):
+    sum = 0
+    for i in kwargs:
+        sum += kwargs[i]
+    return sum
+print(add_multiple_numbers(num1=10, num2=20, num3=30)) # 60
