@@ -115,9 +115,11 @@ print(multiple_args('Doud', 'Gaya', 10,20,30, item1="Pen, ", item2="Paper,", ite
 
 ```
 
-
 Note: the `''' string '''` is a template literals use to print special types of string and the ` format() ` is a [string](../python_string/string.py) method to print a formatted string. To learn more about [string manipulation](../python_string/string.py) check out this [link here](../python_string/string.py)
 
 
 
 ## THe Unpacking Operators `*` and `**`
+
+The two eperators can be used to do alot of cool stuffs beyond just parsing arguments to a function.
+
